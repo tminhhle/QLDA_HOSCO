@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Công Việc</title>
+    <link rel="stylesheet"  href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css">
+    <link rel="stylesheet" href="../CSS/qlcv.css">
+</head>
+<body>
+    <!-- Header Section (Thanh điều hướng) -->
+    <header>
+        <nav class="navbar">
+            <a href="#">Trang chủ</a>
+            <a href="#">Quản lý dự án</a>
+            <a class="active" href="#">Quản lý công việc</a>
+            <a href="#">Quản lý người dùng</a>
+            <a href="#">Thống kê</a>
+            <div class="user-info">
+                <i class="fa-regular fa-circle-user"></i><span><strong>Minh</strong></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content Section (Nội dung) -->
+    <main>
+        <div class="project-list">
+            <h1>DANH SÁCH CÔNG VIỆC</h1>
+            <div class="actions">
+                <button class="btn-add"><strong>+ THÊM</strong></button>
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+
+            <!-- Table for work tasks -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>MÃ CÔNG VIỆC</th>
+                        <th>TÊN CÔNG VIỆC</th>
+                        <th>NGƯỜI THỰC HIỆN</th>
+                        <th>DỰ ÁN</th>
+                        <th>TRẠNG THÁI</th>
+                        <th>XEM</th>
+                        <th>SỬA</th>
+                        <th>XÓA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>CV001</td>
+                        <td>Thiết kế giao diện</td>
+                        <td>ND001 - Nguyễn Văn A</td>
+                        <td>001 - Dự án 01</td>
+                        <td>Hoàn thành</td>
+                        <td><i class="fa-regular fa-eye"></i></td>
+                        <td><i class="fa-regular fa-pen-to-square"></i></td>
+                        <td> <i class="fa-regular delete-btn fa-trash-can" onclick="showPopup('Công việc CV001')"></i></td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>CV002</td>
+                        <td>Phát triển back-end</td>
+                        <td>ND002 - Trần Thị B</td>
+                        <td>002 - Dự án 02</td>
+                        <td>Đang thực hiện</td>
+                        <td><i class="fa-regular fa-eye"></i></td>
+                        <td><i class="fa-regular fa-pen-to-square"></i></td>
+                        <td> <i class="fa-regular delete-btn fa-trash-can" onclick="showPopup('Dự án 1')"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div class="popup-overlay" id="deletePopup">
+        <div class="popup-box">
+          <h2>Xác nhận xóa</h2>
+          <p>Bạn có chắc chắn muốn xóa <strong id="projectName"></strong>?</p>
+          <button class="btn-confirm" onclick="confirmDelete()">Xóa</button>
+          <button class="btn-cancel" onclick="closePopup()">Hủy</button>
+        </div>
+      </div>
+    
+      <script>
+        let selectedProject = '';
+    
+        function showPopup(projectName) {
+          selectedProject = projectName;
+          document.getElementById("projectName").innerText = projectName;
+          document.getElementById("deletePopup").style.display = "flex";
+        }
+    
+        function closePopup() {
+          document.getElementById("deletePopup").style.display = "none";
+        }
+    
+        function confirmDelete() {
+          // Xử lý xóa dự án ở đây (ví dụ: gọi API hoặc xóa khỏi bảng)
+          alert("Đã xóa " + selectedProject);
+          closePopup();
+        }
+      </script>
+</body>
+</html>

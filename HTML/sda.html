@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa Dự Án</title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css">
+    <link rel="stylesheet" href="../CSS/sda.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#">Trang chủ</a>
+            <a class="active" href="#">Quản lý dự án</a>
+            <a href="#">Quản lý công việc</a>
+            <a href="#">Quản lý người dùng</a>
+            <a href="#">Thống kê</a>
+            <div class="user-info">
+                <i class="fa-regular fa-circle-user"></i> <span><strong>Minh</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="back-wrapper">
+        <button class="back-btn" onclick="history.back()">← Quay lại</button>
+    </div>
+
+    <main>
+        <section class="edit-project">
+            <h1>SỬA DỰ ÁN</h1>
+            <form action="#" method="post">
+                <label for="project-name">Tên dự án</label>
+                <input type="text" id="project-name" value="Dự án ABC" required>
+
+                <label for="description">Mô tả</label>
+                <textarea id="description" required>Dự án phát triển phần mềm quản lý...</textarea>
+
+                <div class="date-grid">
+                    <div>
+                        <label for="start-date-est">Ngày bắt đầu dự kiến</label>
+                        <input type="datetime-local" id="start-date-est" value="2024-05-01T08:00" required>
+                    </div>
+                    <div>
+                        <label for="end-date-est">Ngày kết thúc dự kiến</label>
+                        <input type="datetime-local" id="end-date-est" value="2024-08-01T17:00" required>
+                    </div>
+                </div>
+
+                <div class="date-grid">
+                    <div>
+                        <label for="start-date-real">Ngày bắt đầu thực tế</label>
+                        <input type="datetime-local" id="start-date-real" value="2024-05-03T08:00" required>
+                    </div>
+                    <div>
+                        <label for="end-date-real">Ngày kết thúc thực tế</label>
+                        <input type="datetime-local" id="end-date-real" value="2024-08-15T17:00" required>
+                    </div>
+                </div>
+
+                <label for="status">Trạng thái</label>
+                <select id="status" required>
+                    <option value="1">Chưa bắt đầu</option>
+                    <option value="2" selected>Đang tiến hành</option>
+                    <option value="3">Hoàn thành</option>
+                </select>
+
+                <button type="submit">CẬP NHẬT</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
