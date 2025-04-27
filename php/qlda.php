@@ -132,7 +132,7 @@ if ($search !== '') {
           } else if (xhr.responseText.trim() === "not_found") {
             alert("Dự án không tồn tại!");
           } else {
-            alert("Xóa thất bại. Vui lòng thử lại.");
+            alert("Xóa thất bại. Vui lòng thử lại..");
           }
         }
       };
