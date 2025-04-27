@@ -133,6 +133,7 @@ if ($search !== '') {
             alert("Dự án không tồn tại!");
           } else {
             alert("Xóa thất bại. Vui lòng thử lại.");
+            //test
           }
         }
       };
