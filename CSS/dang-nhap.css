@@ -1,0 +1,114 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: #f0f4f8;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-panel {
+      flex: 7;
+      background-color: #fff;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-panel img {
+    
+      margin-bottom: 20px;
+    }
+
+    .left-panel #logo {
+      width: 100px;
+      
+    }
+
+    .left-panel h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #003b73;
+    }
+
+    .left-panel .illustration {
+      max-width: 100%;
+    }
+
+    .right-panel {
+      flex: 3;
+      background: #0099ff;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+    }
+
+    .right-panel h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .btn-login {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: #e21010;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-login:hover {
+      background-color: #8c2712;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .left-panel, .right-panel {
+        flex: none;
+        width: 100%;
+      }
+    }

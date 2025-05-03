@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+}
+
+header {
+    background-color: #00aeef;
+    padding: 10px 0;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a.active {
+    border-bottom: 3px solid white;
+}
+
+.user-info {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    margin-left: auto;
+}
+  
+  
+  .user-info:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .logout-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    color: #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+    z-index: 10;
+  }
+  
+  .logout-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .logout-menu a:hover {
+    background-color: #f2f2f2;
+  }
+
+main {
+    padding: 0 20px 20px 20px;
+}
+
+.add-project {
+    background-color: white;
+    padding: 20px 40px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-project h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e21010;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"], select, textarea {
+    /*width: 100%;*/
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+.fa-regular {
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+ 
+button {
+    background-color: #00aeef;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    color: #e21010;
+}
+
+.date-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.date-grid label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.date-grid input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.back-wrapper {
+    padding-left: 10px;
+    background-color: #f4f7fa;
+}
+
+.back-btn {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 8px 18px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+}
+
+.back-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Áp dụng font chung cho toàn bộ trang */
+body, input, select, textarea, button  {
+    font-family: Arial, sans-serif !important;
+    font-size: 14px;
+}
+
