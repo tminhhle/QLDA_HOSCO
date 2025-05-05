@@ -16,7 +16,7 @@ if (isset($_GET['MaDA'])) {
   $result_project = $conn->query($sql_project);
   $duan = $result_project->fetch_assoc();
 
- // Lấy danh sách thành viên tham gia (JOIN thêm bảng phongban)
+ // Lấy danh sách thành viên tham gia (
 $sql_members = "
 SELECT nd.MaNguoiDung, nd.HoTen, pb.TenPhongBan, ndd.VaiTro
 FROM qlda.nguoidungduan ndd

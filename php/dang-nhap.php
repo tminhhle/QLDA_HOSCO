@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo "fail";
     }
-    exit; // ❗ QUAN TRỌNG: để tránh in ra HTML phía dưới
+    exit; // 
 }
 ?>
 
